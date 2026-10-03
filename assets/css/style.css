@@ -1,0 +1,308 @@
+/* ==========================================================================
+   GlobalAid Assurance — RSA Portal
+   Design tokens
+   ========================================================================== */
+:root {
+  --navy-900: #081A33;
+  --navy-800: #0B2447;
+  --navy-700: #123365;
+  --green-600: #1F7A3F;
+  --green-500: #2E9E52;
+  --green-100: #E7F4EC;
+  --bg: #F6F8FA;
+  --surface: #FFFFFF;
+  --text: #1C2530;
+  --text-muted: #5B6B7B;
+  --border: #E2E8EF;
+  --radius: 10px;
+  --shadow-sm: 0 1px 2px rgba(8, 26, 51, 0.06);
+  --shadow-md: 0 8px 24px rgba(8, 26, 51, 0.08);
+  --font-head: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, .display-font {
+  font-family: var(--font-head);
+  color: var(--navy-800);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p { color: var(--text-muted); line-height: 1.7; }
+
+a { color: var(--navy-700); text-decoration: none; }
+a:hover { color: var(--green-600); }
+
+:focus-visible {
+  outline: 2px solid var(--green-500);
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+.ga-navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+.ga-navbar .navbar-brand img { height: 42px; width: auto; }
+.ga-navbar .nav-link {
+  color: var(--navy-800);
+  font-weight: 500;
+  font-size: .95rem;
+  margin: 0 .35rem;
+}
+.ga-navbar .nav-link.active { color: var(--green-600); }
+.ga-navbar .btn-login {
+  border: 1px solid var(--navy-800);
+  color: var(--navy-800);
+  font-weight: 500;
+  border-radius: 6px;
+  padding: .45rem 1.1rem;
+}
+.ga-navbar .btn-login:hover { background: var(--navy-800); color: #fff; }
+.ga-navbar .btn-register {
+  background: var(--green-600);
+  border: 1px solid var(--green-600);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: .45rem 1.1rem;
+}
+.ga-navbar .btn-register:hover { background: var(--green-500); border-color: var(--green-500); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+  color: #fff;
+  padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 { color: #fff; font-size: 2.6rem; }
+.hero p.lead { color: #C6D2E3; max-width: 34rem; }
+.hero .stat-value { font-family: var(--font-head); font-size: 1.6rem; color: #fff; font-weight: 600; }
+.hero .stat-label { color: #9AAAC2; font-size: .82rem; }
+.hero .stat + .stat { border-left: 1px solid rgba(255,255,255,.15); padding-left: 1.5rem; margin-left: 1.5rem; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(46, 158, 82, .15);
+  border: 1px solid rgba(46, 158, 82, .4);
+  color: #A9E3BC;
+  padding: .4rem .9rem;
+  border-radius: 100px;
+  font-size: .82rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Sections ---------- */
+.section { padding: 4.5rem 0; }
+.section-title { font-size: 1.9rem; margin-bottom: .6rem; }
+.section-sub { max-width: 38rem; }
+
+/* ---------- Feature blocks (bordered, not shadow-card cliché) ---------- */
+.feature {
+  border-left: 3px solid var(--green-500);
+  background: var(--surface);
+  border-radius: 4px;
+  padding: 1.6rem 1.5rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+.feature .icon-wrap {
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--green-100);
+  color: var(--green-600);
+  border-radius: 8px;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.feature h3 { font-size: 1.1rem; margin-bottom: .5rem; }
+.feature p { font-size: .92rem; margin-bottom: 0; }
+
+/* ---------- Coverage strip ---------- */
+.coverage-strip {
+  background: var(--navy-800);
+  color: #fff;
+}
+.coverage-strip .item { padding: 2rem 1rem; text-align: center; border-right: 1px solid rgba(255,255,255,.1); }
+.coverage-strip .item:last-child { border-right: none; }
+.coverage-strip .num { font-family: var(--font-head); font-size: 2rem; font-weight: 600; color: var(--green-500); }
+.coverage-strip .label { color: #C6D2E3; font-size: .85rem; }
+
+/* ---------- Auth / form cards ---------- */
+.auth-shell {
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 3rem 0;
+}
+.auth-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem;
+}
+.auth-side {
+  background: var(--navy-800);
+  border-radius: var(--radius) 0 0 var(--radius);
+  color: #fff;
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.auth-side h2 { color: #fff; font-size: 1.5rem; }
+.auth-side p { color: #C6D2E3; }
+.auth-side ul { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.auth-side ul li { padding: .4rem 0; color: #DCE6F2; font-size: .92rem; }
+.auth-side ul li i { color: var(--green-500); margin-right: .6rem; }
+
+.form-label { font-weight: 500; color: var(--navy-800); font-size: .9rem; }
+.form-control, .form-select {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .65rem .85rem;
+  font-size: .95rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--green-500);
+  box-shadow: 0 0 0 .2rem rgba(46,158,82,.12);
+}
+
+.otp-input {
+  width: 3rem; height: 3.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: var(--font-head);
+}
+
+.btn-primary-ga {
+  background: var(--green-600);
+  border: 1px solid var(--green-600);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: .7rem 1.2rem;
+}
+.btn-primary-ga:hover { background: var(--green-500); border-color: var(--green-500); color: #fff; }
+.btn-outline-ga {
+  border: 1px solid var(--navy-800);
+  color: var(--navy-800);
+  border-radius: 6px;
+  font-weight: 500;
+  padding: .7rem 1.2rem;
+  background: transparent;
+}
+.btn-outline-ga:hover { background: var(--navy-800); color: #fff; }
+
+.tab-toggle .nav-link {
+  color: var(--text-muted);
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  padding: .6rem .2rem;
+  margin-right: 1.5rem;
+}
+.tab-toggle .nav-link.active {
+  color: var(--navy-800);
+  background: transparent;
+  border-bottom: 2px solid var(--green-500);
+}
+
+/* ---------- Stepper (dealer onboarding — genuine sequence) ---------- */
+.stepper { display: flex; list-style: none; padding: 0; margin: 0 0 2.5rem; }
+.stepper li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+.stepper li .circle {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .5rem;
+  font-family: var(--font-head);
+  font-weight: 600;
+}
+.stepper li::before {
+  content: '';
+  position: absolute;
+  top: 17px; left: -50%;
+  width: 100%; height: 2px;
+  background: var(--border);
+  z-index: -1;
+}
+.stepper li:first-child::before { display: none; }
+.stepper li.active .circle,
+.stepper li.done .circle { background: var(--green-600); border-color: var(--green-600); color: #fff; }
+.stepper li.active { color: var(--navy-800); font-weight: 600; }
+.stepper li.done::before { background: var(--green-600); }
+
+.step-panel { display: none; }
+.step-panel.active { display: block; }
+
+/* ---------- Policy cards / result cards ---------- */
+.policy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+.policy-card .policy-no { font-family: var(--font-head); color: var(--navy-800); font-weight: 600; }
+.status-pill {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--green-100); color: var(--green-600);
+  padding: .3rem .8rem; border-radius: 100px; font-size: .8rem; font-weight: 500;
+}
+.status-pill.pill-muted { background: #EEF1F5; color: var(--text-muted); }
+.policy-meta { border-top: 1px dashed var(--border); margin-top: 1.25rem; padding-top: 1.25rem; }
+.policy-meta .label { font-size: .78rem; color: var(--text-muted); text-transform: none; }
+.policy-meta .value { font-weight: 600; color: var(--navy-800); font-size: .95rem; }
+
+/* ---------- Footer ---------- */
+footer.ga-footer { background: var(--navy-900); color: #B9C6DA; padding: 3rem 0 1.5rem; }
+footer.ga-footer h5 { color: #fff; font-size: 1rem; margin-bottom: 1rem; }
+footer.ga-footer a { color: #B9C6DA; }
+footer.ga-footer a:hover { color: var(--green-500); }
+footer.ga-footer .brand-line img { height: 34px; margin-bottom: .8rem; }
+footer.ga-footer hr { border-color: rgba(255,255,255,.1); margin: 2rem 0 1.2rem; }
+footer.ga-footer .fine { font-size: .8rem; color: #7C8CA5; }
+
+/* ---------- Utility ---------- */
+.text-green { color: var(--green-500) !important; }
+.bg-shape {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,158,82,.25), transparent 70%);
+}
+
+@media (max-width: 767.98px) {
+  .hero { padding: 3rem 0 3.5rem; text-align: center; }
+  .hero p.lead { margin-left: auto; margin-right: auto; }
+  .hero .stat-row { justify-content: center; }
+  .auth-side { border-radius: var(--radius) var(--radius) 0 0; }
+}
