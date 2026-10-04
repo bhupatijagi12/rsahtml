@@ -10,6 +10,7 @@ $email    = mysqli_real_escape_string($link, trim($_POST['email']));
 $address  = mysqli_real_escape_string($link, trim($_POST['address']));
 $pincode  = mysqli_real_escape_string($link, trim($_POST['pincode']));
 $gst      = mysqli_real_escape_string($link, trim($_POST['gst']));
+$pan_number = mysqli_real_escape_string($link, trim($_POST['pan_number']));
 $password = rand();
 
 if(empty($name) ||
@@ -46,7 +47,7 @@ if(mysqli_num_rows($check) > 0)
     exit;
 }
 
-
+/*
 $uploadDir = "uploads/";
 
 if (!file_exists($uploadDir))
@@ -105,7 +106,7 @@ $extension;
 move_uploaded_file(
 $tmpName,
 $uploadDir.$newFileName
-);
+);*/
 
 $hash = password_hash($password,PASSWORD_DEFAULT);
 
@@ -116,13 +117,13 @@ name,
 mobile,
 email,
 gst_number,
+pan_number,
 password,
 address,
 pincode,
 created_date,
 status,
-ip_address,
-document
+ip_address
 )
 VALUES
 (
@@ -130,13 +131,13 @@ VALUES
 '$mobile',
 '$email',
 '$gst',
+'$pan_number',
 '$hash',
 '$address',
 '$pincode',
 NOW(),
 '2',
-'$ip_address',
-'$newFileName'
+'$ip_address'
 )
 ");
 $id = mysqli_insert_id($link);

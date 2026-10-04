@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "rsa";
+$db = "rsa_portal";
 $link = mysqli_connect($host, $user, $pass, $db);
 if (!$link)
 {

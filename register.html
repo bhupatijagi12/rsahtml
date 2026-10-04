@@ -82,7 +82,7 @@ cursor:pointer;
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label class="form-label">Dealership Name</label>
-                      <input type="text" class="form-control" placeholder="Name" required name="name" id="name">
+                      <input type="text" class="form-control" placeholder="Name" name="name" id="name">
                       <div class="error" id="name_error"></div>
                     </div>
                     <!--div class="col-md-6">
@@ -93,34 +93,39 @@ cursor:pointer;
                       <label class="form-label">Mobile number</label>
                       <div class="input-group">
                         <span class="input-group-text" style="background:#F6F8FA;border-color:var(--border);">+91</span>
-                        <input type="tel" class="form-control" maxlength="10" pattern="[0-9]{10}" name="mobile" id="mobile" placeholder="9876543210" required>
-                        <div class="error" id="mobile_error"></div>
+                        <input type="tel" class="form-control" maxlength="10" pattern="[0-9]{10}" name="mobile" id="mobile" placeholder="9876543210" >
                       </div>
+                                              <div class="error" id="mobile_error"></div>
+
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Email address</label>
-                      <input type="email" class="form-control" placeholder="you@example.com" required name="email" id="email">
+                      <input type="email" class="form-control" placeholder="you@example.com"  name="email" id="email">
                                             <div class="error" id="email_error"></div>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Address</label>
-                      <input type="text" class="form-control" placeholder="e.g. Thane" required name="address" id="address">
+                      <input type="text" class="form-control" placeholder="e.g. Thane"  name="address" id="address">
                       <div class="error" id="address_error"></div>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Pincode</label>
-                      <input type="text" class="form-control" name="pincode" id="pincode" maxlength="6" pattern="[0-9]{6}" placeholder="400601" required >
+                      <input type="text" class="form-control" name="pincode" id="pincode" maxlength="6" pattern="[0-9]{6}" placeholder="400601"  >
                       <div class="error" id="pincode_error"></div>
                     </div>
                      <div class="col-md-6">
                       <label class="form-label">GST Number</label>
-                      <input type="text" class="form-control" name="gst" id="gst" placeholder="GFHURU6767643" required >
+                      <input type="text" class="form-control" name="gst" id="gst" placeholder="GFHURU6767643"  >
                       <div class="error" id="gst_error"></div>
                     </div>
                      <div class="col-md-6">
-                      <label class="form-label">Upload RC copy</label>
-                      <input type="file" class="form-control" name="rccopy" id="rccopy" required >
-                      <div class="error" id="rccopy_error"></div>
+                      <label class="form-label">PAN Number</label>
+<!--                       <input type="file" class="form-control" name="rccopy" id="rccopy" required >
+ -->
+            <input type="text" class="form-control" name="pan_number" id="pan_number" placeholder="ARGJP0334J"  >
+                      
+ <div class="error" id="pan_error"></div>
+
                     </div>
                     <!--div class="col-md-6">
                       <label class="form-label">Vehicle type</label>
@@ -137,7 +142,7 @@ cursor:pointer;
                     </div-->
                   </div>
                   <div class="form-check my-4">
-                    <input class="form-check-input" type="checkbox" id="terms" required>
+                    <input class="form-check-input" type="checkbox" id="terms" >
                     <div class="error" id="terms_error"></div>
                     <label class="form-check-label small text-muted" for="tncReg">
                       I agree to the Terms of Service, Privacy Policy and consent to be contacted regarding my RSA cover.
@@ -186,10 +191,10 @@ var address=$("#address").val().trim();
 var pincode=$("#pincode").val().trim();
 var gst = $("#gst").val().trim();
 var rccopy = $("#rccopy").val();
+var pan_number = $("#pan_number").val().trim();
 
 var emailPattern =
 /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 if(name==""){
 $("#name_error").html("Please enter name");
 valid=false;
@@ -198,7 +203,8 @@ if(gst==""){
 $("#gst_error").html("Please enter GST number");
 valid=false;
 }
-if(rccopy==""){
+
+/*if(rccopy==""){
 $("#rccopy_error").html("Please upload RC copy");
 valid=false;
 } 
@@ -224,7 +230,7 @@ $("#document_error").html(
 );
 valid=false;
 }
-}
+}*/
 
 if(mobile==""){
 $("#mobile_error").html("Please enter mobile");
@@ -246,6 +252,10 @@ valid=false;
 
 if(address==""){
 $("#address_error").html("Please enter address");
+valid=false;
+}
+if(pan_number==""){
+$("#pan_error").html("Please enter Pan Number");
 valid=false;
 }
 
