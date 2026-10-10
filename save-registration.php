@@ -229,7 +229,7 @@ Thank you for registering with us.
 </p>
 
 <p>
-Your account has been successfully created. you can access our portal <a href="https://www.rsa-portal.globalaidassurance.com">www.rsa-portal.globalaidassurance.com</a> with below dealer code and password. please complete the onboarding process after logging to the portal.
+Your account has been successfully created. you can access our portal <a href="https://rsa-portal.globalaidassurance.com">rsa-portal.globalaidassurance.com</a> with below dealer code and password. please complete the onboarding process after logging to the portal.
 </p>
 
 <p>
@@ -267,6 +267,7 @@ Copyright '.date('Y').'
 $headers  ="MIME-Version: 1.0\r\n";
 $headers .="Content-type:text/html;charset=UTF-8\r\n";
 $headers .="From: info@globalaidassurance.com\r\n";
+$headers .="CC: info@globalaidassurance.com\r\n";
 
 mail(
 $email,
