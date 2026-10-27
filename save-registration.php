@@ -168,6 +168,9 @@ echo json_encode(array(
 function sendWelcomeMail($name,$email, $dealer_code, $password)
 {
 
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$url = $protocol . '://' . $_SERVER['HTTP_HOST'];
+
 $subject = "Welcome to Our RSA Portal";
 
 $message='
@@ -228,9 +231,10 @@ font-size:12px;
 Thank you for registering with us.
 </p>
 
-<p>
-Your account has been successfully created. you can access our portal <a href="https://rsa-portal.globalaidassurance.com">rsa-portal.globalaidassurance.com</a> with below dealer code and password. please complete the onboarding process after logging to the portal.
-</p>
+<p>Your account has been successfully created. You can access our portal using the link below and your dealer credentials:</p>
+
+<p>Portal URL: '.$url.'/rsa-portal/</p>
+
 
 <p>
 Dealer Code : <b>'.$dealer_code.'
@@ -238,10 +242,9 @@ Dealer Code : <b>'.$dealer_code.'
 <p>
 Password : <b>'.$password.'
 </b></p>
-
+<p>Please log in to the portal and complete the onboarding process.</p>
 <p>
-If you have any questions,
-please contact our support team.
+If you have any questions or require assistance, please contact our support team.
 </p>
 
 <br>

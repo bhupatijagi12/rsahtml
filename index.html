@@ -25,7 +25,7 @@ padding:10px;
 }
 
 .error{
-color:red;
+color:red;  
 font-size:12px;
 }
 
@@ -48,7 +48,7 @@ cursor:pointer;
 
 <nav class="navbar navbar-expand-lg ga-navbar">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt="GlobalAid Assurance"></a>
+    <a class="navbar-brand11" href="index.html"><img src="assets/images/logo.jpg" alt="GlobalAid Assurance" style="width: 14%;"></a>
    <!--  <div class="ms-auto"><a href="login.html" class="btn btn-login btn-sm">Already have an account? Log in</a></div> -->
   </div>
 </nav>
@@ -82,7 +82,7 @@ cursor:pointer;
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label class="form-label">Dealership Name</label>
-                      <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+                      <input type="text" class="form-control" placeholder="e.g. Tata Motors" name="name" id="name">
                       <div class="error" id="name_error"></div>
                     </div>
                     <!--div class="col-md-6">
@@ -93,14 +93,14 @@ cursor:pointer;
                       <label class="form-label">Mobile number</label>
                       <div class="input-group">
                         <span class="input-group-text" style="background:#F6F8FA;border-color:var(--border);">+91</span>
-                        <input type="tel" class="form-control" maxlength="10" pattern="[0-9]{10}" name="mobile" id="mobile" placeholder="9876543210" >
+                        <input type="tel" class="form-control" maxlength="10" pattern="[0-9]{10}" name="mobile" id="mobile" placeholder="e.g. 9876543210" >
                       </div>
                                               <div class="error" id="mobile_error"></div>
 
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Email address</label>
-                      <input type="email" class="form-control" placeholder="you@example.com"  name="email" id="email">
+                      <input type="email" class="form-control" placeholder="e.g. you@example.com"  name="email" id="email">
                                             <div class="error" id="email_error"></div>
                     </div>
                     <div class="col-md-6">
@@ -110,19 +110,19 @@ cursor:pointer;
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Pincode</label>
-                      <input type="text" class="form-control" name="pincode" id="pincode" maxlength="6" pattern="[0-9]{6}" placeholder="400601"  >
+                      <input type="text" class="form-control" name="pincode" id="pincode" maxlength="6" pattern="[0-9]{6}" placeholder="e.g. 400601"  >
                       <div class="error" id="pincode_error"></div>
                     </div>
                      <div class="col-md-6">
                       <label class="form-label">GST Number</label>
-                      <input type="text" class="form-control" name="gst" id="gst" placeholder="GFHURU6767643"  >
+                      <input type="text" class="form-control"  maxlength="15" name="gst" id="gst" placeholder="e.g. GFHURU6767643"  >
                       <div class="error" id="gst_error"></div>
                     </div>
                      <div class="col-md-6">
                       <label class="form-label">PAN Number</label>
 <!--                       <input type="file" class="form-control" name="rccopy" id="rccopy" required >
  -->
-            <input type="text" class="form-control" name="pan_number" id="pan_number" placeholder="ARGJP0334J"  >
+            <input type="text" class="form-control" maxlength="10" name="pan_number" id="pan_number" placeholder="e.g. ARGJP0334J"  >
                       
  <div class="error" id="pan_error"></div>
 

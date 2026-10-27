@@ -56,7 +56,7 @@ a:hover { color: var(--green-600); }
   padding-top: .65rem;
   padding-bottom: .65rem;
 }
-.ga-navbar .navbar-brand img { height: 42px; width: auto; }
+.ga-navbar .navbar-brand img { /*height: 42px; width: auto;*/ }
 .ga-navbar .nav-link {
   color: var(--navy-800);
   font-weight: 500;
